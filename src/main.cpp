@@ -24,10 +24,15 @@ int main(void)
 
   // unsigned char data = 0;
 
-  while(1)
-  {
-    twi_print_twsr();
-    // twi_start();
+  // while(1)
+  // {
+  _delay_ms(1000);
+  twi_print_twsr();
+  twi_start();
+  twi_print_twsr();
+  twi_stop();
+  twi_print_twsr();
+
 
     // twi_write(SLA_W);
 
@@ -43,5 +48,5 @@ int main(void)
     // twi_stop();
 
     // usart_tx_float(received_data, 3, 0);
-  }
+  // }
 }
